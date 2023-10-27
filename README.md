@@ -32,6 +32,8 @@ Please open the HTML file in the browser and inspect the page. Then please view 
 
 The JavaScript file that logs this code contains comments. The tutor was asked if this was good practice and the advice given was that as I am new to web development, there should be lots of comments at this stage. Hopefully the comments and the commits explain the process I followed to complete the assignment. I have also made notes here to help me remember the process and what the syntax means. 
 
+I have chosen not to recursively recall the function on line 31. I feel that for the user this can get confusing and can feel like you're in an alert spiral. Once they are told about their error they have to re-start the process. The user hasn't gone too far through the process at this point sop hopefully wouldn't feel too frustrated. The alert informs them of the required action. 
+
 ## References
 
 I completed the Northcoders pre-work JavaScript module, so I had a foundation knowledge of some of the concepts covered. I have used google a lot this week, including Stack Overflow, W3 schools and MDN web docs. We also used the 1:1 tutor session this week to look at assignment 5. 

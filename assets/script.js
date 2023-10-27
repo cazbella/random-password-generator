@@ -18,19 +18,28 @@ var upperCasedCharacters = [
 // Function to prompt user for password options
 function getPasswordOptions() {
 
-  var passwordLength = parseInt(prompt("Please enter a number between 8-128 for your password length"));
+  var passwordLength = parseInt(prompt("Please enter a number between 8-128 for your password length."));
   console.log(passwordLength);
   console.log(isNaN(passwordLength))
 
+  //NaN checks for words/letters
+
   if (isNaN(passwordLength)) {
-    alert("Please Enter a number");
+    alert("Please enter a number between 8 and 128 characters. Please start again.");
+    return;
+
+    //I could recursively call it here but I think that makes it annoying. they have to press button to start again. 
+    
+  }
+
+  //this asks them to enter a number if they have antered a word/letters.
+
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert("Incorrect number - Please enter a number between 8-128. Please start again.")
     return;
   }
 
-  if (passwordLength < 8 || passwordLength > 128) {
-    alert("Incorrect number - Please enter a number between 8-128")
-    return;
-  }
+  //This checks if the length is correct
 
 
   var upperCaseCriteria = confirm("Do you require upper case letters?")
@@ -47,7 +56,22 @@ function getPasswordOptions() {
 
   console.log(numbersCriteria);
 
+  if (!upperCaseCriteria && !lowerCaseCriteria && !specialCharCriteria && !numbersCriteria) {
+    alert("You must select at least one character type for your password.");
+    return;
+  }
+//makes sure user has at least one type of character selected. 
+  var passwordOptions = {
+    length: passwordLength,
+    useUpperCase: upperCaseCriteria,
+    useLowerCase: lowerCaseCriteria,
+    useSpecialChars: specialCharCriteria,
+    useNumbers: numbersCriteria
+  };
 
+  //This object is used to store the user's preferences for generating a password. e.g. length: This property stores the length that the user added.  It's set to the value of passwordLength, which is obtained from the user's input.
+
+  return passwordOptions;
   //return "password"
   //Math.Random()
   //Math.floor()
@@ -55,8 +79,7 @@ function getPasswordOptions() {
 
 
 
-
-//do you want lower case charachters
+//
 
 
 // Function for getting a random element from an array
