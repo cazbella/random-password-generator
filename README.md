@@ -41,7 +41,7 @@ If the user enters a number of the wrong size, the following message appears -
 
 If the user clicks the button at this point the process begins again. 
 
-The Console
+__The Console__
 _______________
 It is a requirement that there are no errors in the console.
 
@@ -51,17 +51,17 @@ Please open the HTML file in the browser and inspect the page. Then please view 
 
 As you can see, there are no errors in the console. 
 
-A Note about Pseudocode
+__A Note about Pseudocode__
 _____________________________
 
 The JavaScript file that logs this code contains lots of comments. The tutor was asked if this was good practice and the advice given was that as I am new to web development, there should be lots of comments at this stage. Hopefully the comments and the commits explain the process I followed to complete the assignment. I have also made notes here to help me remember the process and what the syntax means. 
 
-A Note about Function
+__A Note about Function__
 _________________________
 
 I have chosen not to recursively recall the function on line 31. I feel that for the user prompts without a break can get confusing and can feel like you're in an alert spiral. Once they are told about their error they have to re-start the process. The user hasn't gone too far through the process at this point so hopefully wouldn't feel too frustrated. The alert informs them of the required action. 
 
-A Note about Responsiveness
+__A Note about Responsiveness__
 ___________________________
 The assignment criteria states that the application should be responsive. I have tested this using chrome inspect and also on mobile. Please find a screenshot below showing the page on my phone; 
 
