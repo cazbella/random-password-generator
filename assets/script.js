@@ -79,16 +79,31 @@ function getPasswordOptions() {
 
 
 
-//
+//from mdn docs The .concat method in JavaScript is used to combine two or more arrays, creating a new array that contains the elements of the original arrays. It doesn't modify the existing arrays but returns a new array that's a result of the concatenation.
 
 
 // Function for getting a random element from an array
-function getRandom(arr) {
 
+function getRandom(arr) {
+  var randomIndex = Math.floor(Math.random() * arr.length);
+  return arr[randomIndex];
 }
 
+//This creates a function to pick a random character from an array
+
+// function called getRandom. This function takes one argument, which is an array (arr). 
+
+//Math.random() generates a random decimal point number between 0 (inclusive) and 1 (exclusive). This number is then multiplied by the length of the input array arr.
+
+//The Math.floor() function is used to round down the result of the multiplication to the nearest whole number/integer. This integer represents a random index within the array.
+//The function returns the element from the arr at the randomly generated index. It selects a random element from the input array and returns it.
+
 // Function to generate password with user input
+// use conditionals to choose which arrays to concatenate
+  // for example, if they want the special characters and the lowercase characters,
+  //    put those arrays together
 function generatePassword() {
+  
 
 }
 
@@ -102,3 +117,4 @@ generateBtn.addEventListener("click", function () {
   console.log(textAreaElement)
   textAreaElement.textContent = getPassword
 })
+//this enables button to be clicked and access to presenting the password in the box.
